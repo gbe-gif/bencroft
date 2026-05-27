@@ -27,7 +27,7 @@ export default function App() {
       {/* Header Section from Editorial Aesthetic */}
       <header className="w-full border-b border-[#c5a059]/30 py-4 px-6 md:px-8 flex justify-between items-center shrink-0">
         <div className="flex flex-col">
-          <h1 className="font-serif text-xl md:text-3xl tracking-tight text-[#c5a059]">BANCROFT UNIVERSITY</h1>
+          <h1 className="font-serif text-xl md:text-3xl tracking-tight text-[#c5a059]">BENCROFT UNIVERSITY</h1>
           <p className="text-[8px] md:text-[10px] tracking-[0.3em] uppercase opacity-70 mt-1">Veritas et Innovatio • Est. 1768</p>
         </div>
         <div className="text-right border-l border-[#c5a059]/30 pl-4 md:pl-6 hidden sm:block">
