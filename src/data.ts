@@ -126,6 +126,9 @@ export const supportingCharacters = [
     enName: "Colton Miller",
     icon: "🏈",
     avatar: "https://gbe88.uk/1/Ne/a23.webp",
+    age: "23",
+    height: "190",
+    mbti: "ESTP",
     sections: [
       {
         subtitle: "[기본 정보 및 외형]",
@@ -150,6 +153,9 @@ export const supportingCharacters = [
     enName: "Toby Evans",
     icon: "🎮",
     avatar: "https://gbe88.uk/1/Ne/a24.webp",
+    age: "22",
+    height: "185",
+    mbti: "INTP",
     sections: [
       {
         subtitle: "[기본 정보 및 외형]",
@@ -175,6 +181,9 @@ export const supportingCharacters = [
     enName: "Clara Williams",
     icon: "👑",
     avatar: "https://gbe88.uk/1/Ne/a25.webp",
+    age: "22",
+    height: "170",
+    mbti: "ESFJ",
     sections: [
       {
         subtitle: "[기본 정보 및 외형]",
@@ -200,6 +209,9 @@ export const supportingCharacters = [
     enName: "Jace Logan",
     icon: "🍸",
     avatar: "https://gbe88.uk/1/Ne/a26.webp",
+    age: "24",
+    height: "184",
+    mbti: "ENTP",
     sections: [
       {
         subtitle: "[기본 정보 및 외형]",
@@ -224,6 +236,9 @@ export const supportingCharacters = [
     enName: "Richard Vance",
     icon: "🏛️",
     avatar: "https://gbe88.uk/1/Ne/a27.webp",
+    age: "54",
+    height: "189",
+    mbti: "ENFJ",
     sections: [
       {
         subtitle: "[기본 정보 및 외형]",
@@ -249,6 +264,9 @@ export const supportingCharacters = [
     enName: "Evelyn Vance",
     icon: "💻",
     avatar: "https://gbe88.uk/1/Ne/-a28.webp",
+    age: "53",
+    height: "173",
+    mbti: "INTJ",
     sections: [
       {
         subtitle: "[기본 정보 및 외형]",

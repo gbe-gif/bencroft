@@ -24,28 +24,38 @@ export function CharactersTab() {
           <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-[#c5a059]/40 -mr-[1px] -mt-[1px] hidden md:block"></div>
           
           <div className="md:w-[40%] flex flex-col border-b md:border-b-0 md:border-r border-[#c5a059]/30 bg-[#1a2e26]">
-            <div className="aspect-[2/3] w-full relative flex items-center justify-center overflow-hidden border-b border-[#c5a059]/20">
+            <div className="aspect-[2/3] w-full relative flex items-center justify-center overflow-hidden border-b border-[#c5a059]/20 bg-[#152820]">
               <img 
                 src={mainCharacter.avatar} 
                 alt={mainCharacter.name} 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e26] via-transparent to-transparent z-10 opacity-70 pointer-events-none"></div>
-              <div className="absolute bottom-6 text-center w-full z-20">
-                 <p className="font-serif italic text-3xl text-[#c5a059] leading-none mb-1">{mainCharacter.enName}</p>
-                 <p className="text-[9px] uppercase tracking-widest opacity-80">{mainCharacter.role}</p>
-              </div>
             </div>
             <div className="p-6 bg-[#1a2e26]">
-              <div className="flex justify-between items-baseline mb-4">
+              <p className="font-serif italic text-3xl text-[#c5a059] leading-none mb-1 text-center">{mainCharacter.enName}</p>
+              <div className="flex justify-center items-center gap-3 mb-6">
                 <h3 className="font-serif text-2xl text-[#c5a059]">{mainCharacter.name}</h3>
-                <span className="text-[9px] border border-[#c5a059]/50 px-2 py-0.5 rounded-full text-[#c5a059]">ISTP</span>
               </div>
-              <p className="text-xs leading-relaxed opacity-80 text-[#e3dac9]">
+              
+              <p className="text-[11px] leading-relaxed opacity-80 text-[#e3dac9] text-center mb-6">
                 컴퓨터공학과 4학년 / 머신러닝 전공<br/>
-                본가: 버지니아 주 맥린<br/>
-                나이: 23세
+                본가: 버지니아 주 맥린
               </p>
+              
+              <div className="flex justify-between text-[11px] uppercase tracking-widest opacity-80 border-t border-[#c5a059]/20 pt-4 mb-2">
+                <div className="text-center flex-1 border-r border-[#c5a059]/20">
+                  <span className="block text-[#c5a059] mb-1">Age</span>
+                  <span>{mainCharacter.age || "-"}</span>
+                </div>
+                <div className="text-center flex-1 border-r border-[#c5a059]/20">
+                  <span className="block text-[#c5a059] mb-1">Height</span>
+                  <span>194cm</span>
+                </div>
+                <div className="text-center flex-1">
+                  <span className="block text-[#c5a059] mb-1">MBTI</span>
+                  <span>ISTP</span>
+                </div>
+              </div>
               
               <div className="hidden md:block mt-6 pt-6 border-t border-[#c5a059]/20">
                 {mainCharacter.sections

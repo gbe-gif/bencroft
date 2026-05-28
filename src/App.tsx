@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Map, Users, Settings } from "lucide-react";
+import { Map, Users, Image as ImageIcon } from "lucide-react";
 import { WorldbuildingTab } from "./components/tabs/WorldbuildingTab";
 import { CharactersTab } from "./components/tabs/CharactersTab";
 import { SupportingTab } from "./components/tabs/SupportingTab";
+import { GalleryTab } from "./components/tabs/GalleryTab";
 
-type Tab = "world" | "chars" | "supporting";
+type Tab = "world" | "chars" | "supporting" | "gallery";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<Tab>("world");
@@ -17,6 +18,8 @@ export default function App() {
         return <CharactersTab />;
       case "supporting":
         return <SupportingTab />;
+      case "gallery":
+        return <GalleryTab />;
       default:
         return <WorldbuildingTab />;
     }
@@ -43,7 +46,7 @@ export default function App() {
 
       {/* Sticky Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 h-20 border-t border-[#c5a059]/40 bg-[#0a1612] flex z-50">
-        <div className="w-full mx-auto grid grid-cols-3">
+        <div className="w-full mx-auto grid grid-cols-4">
           <button
             onClick={() => setActiveTab("world")}
             className={`flex flex-col items-center justify-center border-r border-[#c5a059]/20 transition-colors ${
@@ -70,7 +73,7 @@ export default function App() {
           
           <button
             onClick={() => setActiveTab("supporting")}
-            className={`flex flex-col items-center justify-center transition-colors ${
+            className={`flex flex-col items-center justify-center border-r border-[#c5a059]/20 transition-colors ${
               activeTab === "supporting" ? "bg-[#152820]/40 text-[#c5a059]" : "text-[#e3dac9]/60 hover:bg-[#152820]/20 hover:text-[#c5a059]"
             }`}
           >
@@ -78,6 +81,18 @@ export default function App() {
               <Users className="w-3 h-3" /> 03
             </span>
             <span className="font-serif text-base md:text-lg">조연</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("gallery")}
+            className={`flex flex-col items-center justify-center transition-colors ${
+              activeTab === "gallery" ? "bg-[#152820]/40 text-[#c5a059]" : "text-[#e3dac9]/60 hover:bg-[#152820]/20 hover:text-[#c5a059]"
+            }`}
+          >
+            <span className="text-[10px] tracking-widest uppercase mb-1 flex items-center gap-1 opacity-80">
+              <ImageIcon className="w-3 h-3" /> 04
+            </span>
+            <span className="font-serif text-base md:text-lg">갤러리</span>
           </button>
         </div>
       </nav>

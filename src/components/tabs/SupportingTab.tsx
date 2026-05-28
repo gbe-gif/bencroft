@@ -28,17 +28,29 @@ export function SupportingTab() {
                   alt={char.name} 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e26] via-transparent to-transparent z-10 opacity-70 pointer-events-none"></div>
                 <div className="absolute top-4 left-4 text-4xl drop-shadow-md z-20">
                   {char.icon}
                 </div>
-                <div className="absolute bottom-6 text-center w-full z-20">
-                   <p className="font-serif italic text-3xl text-[#c5a059] leading-none mb-1">{char.enName}</p>
-                </div>
               </div>
               <div className="p-6 bg-[#1a2e26] flex-1">
-                <div className="flex justify-between items-baseline mb-4">
-                  <h3 className="font-serif text-2xl text-[#c5a059]">{char.name}</h3>
+                <p className="font-serif italic text-2xl text-[#c5a059] leading-none mb-1 text-center">{char.enName}</p>
+                <div className="flex justify-center items-baseline mb-6">
+                  <h3 className="font-serif text-xl tracking-tight text-[#e3dac9]">{char.name}</h3>
+                </div>
+                
+                <div className="flex justify-between text-[11px] uppercase tracking-widest opacity-80 border-t border-[#c5a059]/20 pt-4">
+                  <div className="text-center flex-1 border-r border-[#c5a059]/20">
+                    <span className="block text-[#c5a059] mb-1">Age</span>
+                    <span>{char.age || "-"}</span>
+                  </div>
+                  <div className="text-center flex-1 border-r border-[#c5a059]/20">
+                    <span className="block text-[#c5a059] mb-1">Height</span>
+                    <span>{char.height ? `${char.height}cm` : "-"}</span>
+                  </div>
+                  <div className="text-center flex-1">
+                    <span className="block text-[#c5a059] mb-1">MBTI</span>
+                    <span>{char.mbti || "-"}</span>
+                  </div>
                 </div>
               </div>
             </div>
