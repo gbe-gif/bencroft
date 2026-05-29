@@ -1,6 +1,6 @@
 {
-  "name": "Bancroft Universe RP",
-  "description": "Roleplay web application for Bancroft University universe.",
+  "name": "Bencroft Universe RP",
+  "description": "Roleplay web application for Bencroft University universe.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
