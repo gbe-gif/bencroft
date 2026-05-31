@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { Map, Users, Image as ImageIcon, Lock } from "lucide-react";
+import { Map, Users, Image as ImageIcon, Lock, Sparkles } from "lucide-react";
 import { WorldbuildingTab } from "./components/tabs/WorldbuildingTab";
 import { CharactersTab } from "./components/tabs/CharactersTab";
 import { SupportingTab } from "./components/tabs/SupportingTab";
 import { GalleryTab } from "./components/tabs/GalleryTab";
 import { SecretGalleryTab } from "./components/tabs/SecretGalleryTab";
+import { BonusGalleryTab } from "./components/tabs/BonusGalleryTab";
 
-type Tab = "world" | "chars" | "supporting" | "gallery" | "secret";
+type Tab = "world" | "chars" | "supporting" | "gallery" | "secret" | "bonus";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<Tab>("world");
@@ -23,6 +24,8 @@ export default function App() {
         return <GalleryTab />;
       case "secret":
         return <SecretGalleryTab />;
+      case "bonus":
+        return <BonusGalleryTab />;
       default:
         return <WorldbuildingTab />;
     }
@@ -49,7 +52,7 @@ export default function App() {
 
       {/* Sticky Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 h-20 border-t border-[#c5a059]/40 bg-[#0a1612] flex z-50">
-        <div className="w-full mx-auto grid grid-cols-5">
+        <div className="w-full mx-auto grid grid-cols-6">
           <button
             onClick={() => setActiveTab("world")}
             className={`flex flex-col items-center justify-center border-r border-[#c5a059]/20 transition-colors ${
@@ -100,7 +103,7 @@ export default function App() {
 
           <button
             onClick={() => setActiveTab("secret")}
-            className={`flex flex-col items-center justify-center transition-colors ${
+            className={`flex flex-col items-center justify-center border-r border-[#c5a059]/20 transition-colors ${
               activeTab === "secret" ? "bg-[#152820]/40 text-[#c5a059]" : "text-[#e3dac9]/60 hover:bg-[#152820]/20 hover:text-[#c5a059]"
             }`}
           >
@@ -108,6 +111,18 @@ export default function App() {
               <Lock className="w-3 h-3" /> 05
             </span>
             <span className="font-serif text-[11px] sm:text-xs md:text-sm">시크릿</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("bonus")}
+            className={`flex flex-col items-center justify-center transition-colors ${
+              activeTab === "bonus" ? "bg-[#152820]/40 text-[#c5a059]" : "text-[#e3dac9]/60 hover:bg-[#152820]/20 hover:text-[#c5a059]"
+            }`}
+          >
+            <span className="text-[10px] tracking-widest uppercase mb-1 flex items-center gap-1 opacity-80">
+              <Sparkles className="w-3 h-3" /> 06
+            </span>
+            <span className="font-serif text-[11px] sm:text-xs md:text-sm">보너스</span>
           </button>
         </div>
       </nav>

@@ -24,7 +24,7 @@ export function CharactersTab() {
           <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-[#c5a059]/40 -mr-[1px] -mt-[1px] hidden md:block"></div>
           
           <div className="md:w-[40%] flex flex-col border-b md:border-b-0 md:border-r border-[#c5a059]/30 bg-[#1a2e26]">
-            <div className="aspect-[2/3] w-full relative flex items-center justify-center overflow-hidden border-b border-[#c5a059]/20 bg-[#152820]">
+            <div className="aspect-[3/2] w-full relative flex items-center justify-center overflow-hidden border-b border-[#c5a059]/20 bg-[#152820]">
               <img 
                 src={mainCharacter.avatar} 
                 alt={mainCharacter.name} 

@@ -73,7 +73,7 @@ export function SecretGalleryTab() {
                       src={src} 
                       alt={`Unsafe Gallery image ${index + 14}`} 
                       loading="lazy"
-                      className="shadow-xl"
+                      className="shadow-xl w-full h-auto object-contain"
                     />
                   </div>
                 </div>

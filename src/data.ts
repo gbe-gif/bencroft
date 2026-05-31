@@ -87,7 +87,7 @@ export const mainCharacter = {
   enName: "Declan Vance",
   age: 23,
   role: "Main Character",
-  avatar: "https://gbe88.uk/1/Ne/b.webp", 
+  avatar: "https://gbe88.uk/1/Ne/a2.webp", 
   sections: [
     {
       subtitle: "[기본 프로필]",

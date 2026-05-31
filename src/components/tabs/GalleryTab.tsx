@@ -26,7 +26,7 @@ export function GalleryTab() {
                  src={src} 
                  alt={`Gallery image ${index + 1}`} 
                  loading="lazy"
-                 className="shadow-xl"
+                 className="shadow-xl w-full h-auto object-contain"
                />
              </div>
           </div>
