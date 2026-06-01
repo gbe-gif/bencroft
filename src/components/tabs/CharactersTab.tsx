@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { ShieldAlert, ShieldCheck } from "lucide-react";
 import { mainCharacter } from "../../data";
 import { SectionCard, SectionCardHeader, DataSection } from "../ui/Cards";
 
@@ -9,7 +10,7 @@ export function CharactersTab() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="p-6 md:p-8 max-w-5xl mx-auto"
+      className="p-6 md:p-8 max-w-5xl mx-auto pb-24"
     >
       <div className="mb-8 border-b border-[#c5a059]/30 pb-4 pt-2">
         <p className="text-[10px] tracking-widest opacity-60 uppercase mb-1">02 / Profiles</p>
@@ -80,12 +81,35 @@ export function CharactersTab() {
             </div>
           </div>
           
-          <div className="md:w-[60%] bg-transparent flex flex-col pt-2">
-            {mainCharacter.sections.map((section, idx) => (
-              <div key={idx} className={section.subtitle === "[TMI]" ? "block md:hidden" : "block"}>
-                <DataSection subtitle={section.subtitle} items={section.items} />
-              </div>
-            ))}
+          <div className="md:w-[60%] bg-transparent flex flex-col pt-2 transition-all">
+            {mainCharacter.sections.map((section, idx) => {
+                // @ts-ignore
+                const isAdultSection = section.type === "adult";
+                // @ts-ignore
+                const isSafeSection = section.type === "safe";
+                
+                return (
+                  <div key={idx} className={section.subtitle === "[TMI]" ? "block md:hidden" : "block"}>
+                    <DataSection 
+                      subtitle={section.subtitle} 
+                      items={section.items} 
+                      action={
+                        isSafeSection ? (
+                          <div className="flex items-center gap-2 px-3 py-1.5 border text-[10px] tracking-wider transition-colors border-[#c5a059]/40 bg-[#152820]/40 text-[#c5a059]">
+                            <ShieldCheck className="w-3 h-3" />
+                            <span>15+ Safe Mode</span>
+                          </div>
+                        ) : isAdultSection ? (
+                          <div className="flex items-center gap-2 px-3 py-1.5 border text-[10px] tracking-wider transition-colors border-red-900/40 bg-red-950/20 text-red-400">
+                            <ShieldAlert className="w-3 h-3" />
+                            <span>19+ Adult Mode</span>
+                          </div>
+                        ) : undefined
+                      }
+                    />
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

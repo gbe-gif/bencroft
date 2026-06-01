@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Lock, Unlock } from "lucide-react";
 
 export function SecretGalleryTab() {

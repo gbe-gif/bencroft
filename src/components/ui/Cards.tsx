@@ -22,12 +22,15 @@ export function SectionCardHeader({ title, subtitle }: { title: string; subtitle
   );
 }
 
-export function DataSection({ subtitle, items }: { subtitle: string; items: string[] }) {
+export function DataSection({ subtitle, items, action }: { subtitle: string; items: string[]; action?: ReactNode }) {
   return (
     <div className="mb-6 last:mb-0 p-5 pt-4">
-      <h3 className="text-[10px] tracking-widest uppercase text-[#c5a059] mb-3 opacity-80">
-        {subtitle}
-      </h3>
+      <div className="flex justify-between items-center mb-3">
+        <h3 className="text-[10px] tracking-widest uppercase text-[#c5a059] opacity-80 m-0">
+          {subtitle}
+        </h3>
+        {action}
+      </div>
       <ul className="space-y-2">
         {items.map((item, idx) => (
           <li key={idx} className="flex text-[13px] leading-relaxed opacity-90 text-[#e3dac9]">
